@@ -8,7 +8,7 @@ function identifyById() {
         }
         
         function identifyByTag() {
-        alert(document.getElementsByTagName('p'));
+        console.log(document.getElementsByTagName('p'));
         }
         
         function changeBackground() {
@@ -39,21 +39,40 @@ function identifyById() {
         
         function hide() {
             var e=document.getElementById('block4');
-            e.style.hide();
+            e.style.display='none';
         }
         
-        function changeBackColorForAllBox() {
-            document.getElementById('block3').style.changeFontColor="red";
+        function changeBackColor(color,box1) {
+            var y= document.getElementsByClassName(box1);
+            var i;
+            for(i=0;i<y.length; i++)
+            {
+                y[i].style.backgroundColor=color;
         }
-        
+    }
         
         function addAdjacent() {
+            document.getElementById('para2').innerHTML+="I got generated on the fly";
         }
         
         function removePara() {
-        
+            document.getElementById('para4').style.display='none';
         }
         
+    
+        
         function animatePara() {
+        var x= document.getElementById('box5');
+        var pos=0;
+        var id=setInterval(frame,10);
+        function frame(){
+            if(pos=400){
+                clearInterval(id);
+            }
+            else
+            pos++;
+            x.style.top=pos+'px';
+            x.style.left=pos+'px';
+        }
         
         }
