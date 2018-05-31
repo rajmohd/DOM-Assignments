@@ -20,19 +20,30 @@ function identifyById() {
         }
         
         function changeFontColor() {
-        
+         document.getElementById('block3').addEventListener("mouseover",mouseOver);
+         document.getElementById('block3').addEventListener("mouseover",mouseOut);
+         function mouseOver( )
+             {
+             document.getElementById('block3').style.color="red";
+             }
+             function mouseOut( )
+             {
+                 document.getElementById('block3').style.color="black"; 
+             }
         }
         
         function revertColor() {
-        
+          //  document.getElementById('block3').addEventListener("mouseover",mouseOut);
+            
         }
         
         function hide() {
-        
+            var e=document.getElementById('block4');
+            e.style.hide();
         }
         
         function changeBackColorForAllBox() {
-        
+            document.getElementById('block3').style.changeFontColor="red";
         }
         
         
